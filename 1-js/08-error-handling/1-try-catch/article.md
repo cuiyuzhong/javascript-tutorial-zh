@@ -307,9 +307,7 @@ try {
   let user = JSON.parse(json); // <-- 没有异常
 
   if (!user.name) {
-*!*
-    抛出 new SyntaxError("Incomplete data: no name"); // (*)
-*/!*
+    throw new SyntaxError("Incomplete data: no name"); // (*)
   }
 
   alert( user.name );
